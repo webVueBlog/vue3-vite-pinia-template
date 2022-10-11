@@ -68,5 +68,9 @@ Pre-bundling dependencies:
   ready in 7539ms.
 ```
 
+## 单文件组件
+
+- 单文件组件[`<script setup>`](https://github.com/webVueBlog/vue3-vite-pinia-template/issues/1)
+
 
 
