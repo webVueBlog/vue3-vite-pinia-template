@@ -2,7 +2,37 @@
 
 Vue 3 + Vite + TypeScript + Pinia
 
-# yarn install
+这个模板应该可以帮助你开始在Vite中使用Vue3和Typescript进行开发。该模板使用Vue3<script setup>SFC, 查看 [脚本设置文档](https://cn.vuejs.org/api/sfc-script-setup.html) 以了解更多信息。
+
+# 🔨配置的开发工具：
+
+- Vue 3
+- Vite
+- Typescript
+- Vue Router
+- Pinia
+- Axios
+- ESLint - Prettier
+
+# 单元测试工具
+
+- Jest
+
+# 推荐的 IDE 设置
+
+- VSCode + Volar
+
+# .vueTS 中对导入的类型支持
+
+# 🚀如何开始？
+
+- 1️⃣克隆存储库
+- 2️⃣安装依赖项
+- 3️⃣使用 Vite 进行编译和 HMR 开发
+- 4️⃣编译和缩小以用于生产
+- 5️⃣lints 和修复文件
+
+## yarn install
 
 ```js
 $ yarn install
@@ -17,7 +47,7 @@ warning "@vue/vue3-jest > @babel/plugin-transform-modules-commonjs@7.16.8" has u
 Done in 84.89s.
 ```
 
-# yarn dev
+## yarn dev
 
 ```js
 $ yarn dev
