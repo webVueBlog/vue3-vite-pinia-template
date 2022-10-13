@@ -72,7 +72,8 @@ Pre-bundling dependencies:
 
 ## 单文件组件
 
-- 单文件组件[`<script setup>`](https://github.com/webVueBlog/vue3-vite-pinia-template/issues/1)
+- [`<script setup>`](https://github.com/webVueBlog/vue3-vite-pinia-template/issues/1)
+- [SFC 语法定义](https://github.com/webVueBlog/vue3-vite-pinia-template/issues/2)
 
 
 
