@@ -23,6 +23,8 @@ Vue 3 + Vite + TypeScript + Pinia
 - VSCode + Volar
 
 # .vueTS 中对导入的类型支持
+  
+由于 TypeScript 无法处理.vue导入的类型信息，因此默认情况下它们被填充为通用 Vue 组件类型。在大多数情况下，如果您并不真正关心模板之外的组件道具类型，这很好。但是，如果您希望在.vue导入中获取实际的道具类型（例如，在使用手动调用时获取道具验证），您可以通过从 VSCode 命令面板运行h(...)来启用 Volar 的.vue类型支持插件。Volar: Switch TS Plugin on/off
 
 # 🚀如何开始？
 
