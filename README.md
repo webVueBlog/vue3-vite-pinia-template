@@ -75,5 +75,6 @@ Pre-bundling dependencies:
 - [`<script setup>`](https://github.com/webVueBlog/vue3-vite-pinia-template/issues/1)
 - [SFC 语法定义](https://github.com/webVueBlog/vue3-vite-pinia-template/issues/2)
 - [css功能](https://github.com/webVueBlog/vue3-vite-pinia-template/issues/3)
+- [应用实例 AP](https://github.com/webVueBlog/vue3-vite-pinia-template/issues4)
 
 
