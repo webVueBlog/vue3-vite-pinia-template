@@ -121,6 +121,8 @@ yarn add @vue/eslint-config-prettier --dev
 yarn add @vue/eslint-config-typescript --dev
 ```
 
+eslint检查，与自动格式化
+
 # 单元测试工具
 
 - Jest
