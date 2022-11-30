@@ -106,6 +106,21 @@ Done. Now run:
 
 ![1669791940575](https://user-images.githubusercontent.com/59645426/204729985-87066f7e-ff61-4227-a184-7f47d0ecaaa9.png)
 
+## 约束代码风格
+
+Eslint 支持
+
+```js
+yarn add eslint --dev
+yarn add eslint-plugin-vue --dev
+yarn add prettier --dev
+yarn add eslint-plugin-prettier --dev
+yarn add @typescript-eslint/parser --dev
+yarn add @typescript-eslint/eslint-plugin --dev
+yarn add @vue/eslint-config-prettier --dev
+yarn add @vue/eslint-config-typescript --dev
+```
+
 # 单元测试工具
 
 - Jest
