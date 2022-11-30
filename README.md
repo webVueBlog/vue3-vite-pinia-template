@@ -23,7 +23,7 @@ Vite：下一代前端开发与构建工具
 
 Vite 意在提供开箱即用的配置，同时它的 插件 API 和 JavaScript API 带来了高度的可扩展性，并有完整的类型支持。
 
-这个模板应该可以帮助你开始在Vite中使用Vue3和Typescript进行开发。查看 [文档](https://cn.vuejs.org/api/sfc-script-setup.html) 以了解更多信息。
+这个模板应该可以帮助你开始在 Vite 中使用 Vue3 和 Typescript 进行开发。查看 [文档](https://cn.vuejs.org/api/sfc-script-setup.html) 以了解更多信息。
 
 # 🔨配置的开发工具：
 
@@ -39,11 +39,11 @@ Vite 意在提供开箱即用的配置，同时它的 插件 API 和 JavaScript 
 
 Vue3由于完全由TS进行重写，在应用中对类型判断的定义和使用有很强的表现。同一对象的多个键返回值必须通过定义对应的接口（interface）来进行类型定义。要不然在 ESLint 时都会报错。
 
-vue2 的双向数据绑定是利用 ES5 的一个 API Object.definePropert()对数据进行劫持 结合 发布订阅模式的方式来实现的。Vue3 中使用了 es6 的 ProxyAPI 对数据代理。
+vue2 的双向数据绑定是利用 ES5 的一个 API Object.definePropert() 对数据进行劫持 结合 发布订阅模式的方式来实现的。Vue3 中使用了 es6 的 ProxyAPI 对数据代理。
 
 Vue3支持碎片(Fragments)
 
-Vue2 与 Vue3 最大的区别: Vue2 使用Options API而 Vue3 使用的Composition API
+Vue2 与 Vue3 最大的区别: Vue2 使用Options API 而 Vue3 使用的 Composition API
 
 生命周期钩子变化:
 
@@ -60,6 +60,43 @@ destroyed     -> onUnmounted
 activated     -> onActivated
 deactivated   -> onDeactivated
 ```
+
+## 使用 vite 快速创建脚手架
+
+兼容性注意: Vite 需要 Node.js 版本 >= 12.0.0。
+
+第一步: 在需要创建项目文件目录下打开 cmd 运行以下命令
+
+```js
+# npm 6.x
+npm init @vitejs/app vite_vue3_ts --template
+
+# npm 7+, 需要额外的双横线：
+npm init @vitejs/app vite_vue3_ts -- --template
+
+# yarn
+yarn create @vitejs/app vite_vue3_ts --template
+```
+
+这里我采用 yarn 来安装
+
+![1669791519825](https://user-images.githubusercontent.com/59645426/204728784-cfcb772e-2a6d-4488-b42d-2b15cc59a259.png)
+
+选择 vue 回车 => vue-ts 回车
+
+![1669791576470](https://user-images.githubusercontent.com/59645426/204728955-53bf97b3-6f2d-4add-acbd-77cfcca92c9e.png)
+
+cd 到项目文件夹,安装依赖,启动项目
+
+```js
+Done. Now run:
+
+  cd vite_vue3_ts
+  yarn
+  yarn dev
+```
+
+![1669791940575](https://user-images.githubusercontent.com/59645426/204729985-87066f7e-ff61-4227-a184-7f47d0ecaaa9.png)
 
 # 单元测试工具
 
