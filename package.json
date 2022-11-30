@@ -1,5 +1,5 @@
 {
-  "name": "vite_vue3_ts",
+  "name": "vue3-vite-pinia-template",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
