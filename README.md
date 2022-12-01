@@ -113,6 +113,7 @@ Eslint 支持
 ```js
 yarn add eslint --dev
 yarn add eslint-plugin-vue --dev
+yarn add vite-plugin-eslint --dev
 yarn add prettier --dev
 yarn add eslint-plugin-prettier --dev
 yarn add @typescript-eslint/parser --dev
@@ -124,6 +125,11 @@ yarn add @vue/eslint-config-typescript --dev
 eslint检查，与自动格式化
 
 ## 配置 husky + lint-staged
+
+```js
+yarn add husky --dev
+yarn add lint-staged --dev
+```
 
 ```js
 "husky": {
@@ -140,6 +146,8 @@ eslint检查，与自动格式化
 	]
 }
 ```
+
+> 添加配置文件引用别名 alias (vite.config.ts && tsconfig.json)
 
 # 单元测试工具
 
