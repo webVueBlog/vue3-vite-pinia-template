@@ -123,6 +123,24 @@ yarn add @vue/eslint-config-typescript --dev
 
 eslint检查，与自动格式化
 
+## 配置 husky + lint-staged
+
+```js
+"husky": {
+	"hooks": {
+		"pre-commit": "lint-staged"
+	}
+},
+"lint-staged": {
+	"*.{js,jsx,vue,ts,tsx}": [
+		"yarn lint",
+		"prettier --write",
+		"git add",
+		"eslint --fix"
+	]
+}
+```
+
 # 单元测试工具
 
 - Jest
