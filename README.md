@@ -35,13 +35,28 @@ Vite 意在提供开箱即用的配置，同时它的 插件 API 和 JavaScript 
 
 # 🔨配置的开发工具：
 
-- Vue 3
-- Vite
+- 🌈 Vue 3
+- 🚀 Vite
 - Typescript
 - Vue Router
 - Pinia
 - Axios
 - ESLint - Prettier
+
+## 特性
+
+- 🌈  Vue 3
+- 🚀  所有数据都具有响应式
+- 🔄  轮询请求
+- 🤖  自动处理错误重试
+- 🗄  内置请求缓存
+- 💧  节流请求与防抖请求
+- 🎯  聚焦页面时自动重新请求
+- ⚙️  强大的分页扩展以及加载更多扩展
+- 📠  完全使用 Typescript 编写，具有强大的类型提示
+- ⚡️  兼容 Vite
+- 🍃  轻量化
+- 📦  开箱即用
 
 ## Vue2 与 Vue3 的区别
 
