@@ -21,7 +21,7 @@
  ],
  "parserOptions": {
   "ecmaVersion": 2022,
-  "parser": "@/typescript-eslint/parser",
+  "parser": "@typescript-eslint/parser",
   "sourceType": "module",
   "ecmaFeatures": {
    "jsx": true
@@ -41,7 +41,7 @@
   "@typescript-eslint/no-non-null-assertion": "off",
   "@typescript-eslint/explicit-module-boundary-types":"off",
   "no-var": "error",
-  "prettier/prettier": "error",
+  // "prettier/prettier": "error",
   "no-console": "warn", // 禁止出现 console
   "no-debugger": "warn",
   "no-duplicate-case": "warn", // 禁止出现重复的 case 标签

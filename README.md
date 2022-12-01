@@ -149,6 +149,62 @@ yarn add lint-staged --dev
 
 > 添加配置文件引用别名 alias (vite.config.ts && tsconfig.json)
 
+## 配置 css 预处理器 scss
+
+虽然 vite 原生支持 `less/sass/scss/stylus`，但是你必须手动安装他们的预处理器依赖
+
+通过 sass-loader 把 scss 源码转换为 css 代码，再把 css 代码交给 css-loader 去处理；css-loader 会找出 css 代码中的 @import 和 url() 这样的导入语句，告诉依赖这些资源。同时还支持 css Modules，压缩 css 等功能，处理完后再把结果交给 style-loader 去处理；style-loader 会把 css 代码转换成字符串后，注入到 JavaScript 代码中去，通过 JavaScript 去给 DOM 增加样式。如果你想把 css 代码提取到一个单独的文件而不是和 JavaScript 混合再一起，可以使用 ExtractTextPlugin。
+
+接入 sass-loader，需要的依赖：
+
+```js
+# sass-loader 依赖 node-sass
+yarn add node-sass --dev
+yarn add sass-loader css-loader style-loader --dev
+```
+
+css预处理器：Vite 同时提供了对 `.scss, .sass, .less, .styl 和 .stylus` 文件的内置支持。没有必要为它们安装特定的 `Vite` 插件，但必须安装相应的预处理器依赖：
+
+所有针对性的安装：
+
+```js
+# .scss and .sass
+npm add -D sass
+
+# .less
+npm add -D less
+
+# .styl and .stylus
+npm add -D stylus
+
+# vue3-vite-pinia-template
+yarn add sass --dev
+```
+
+如果使用的是单文件组件，可以通过`<style lang="sass"></style>` 自动开启。
+
+Vite 为 Sass 和 Less 改进了 `@import` 解析，以保证 Vite 别名也能被使用。另外，`url()` 中的相对路径引用的，与根文件不同目录中的 `Sass/Less` 文件会自动变基以保证准确性。
+
+由于 `Stylus API` 限制，`@import` 别名和 `URL` 变基不支持 `Stylus`。
+
+你还可以通过在文件扩展名前加上 `.module` 来结合使用 `CSS modules` 和预处理器，例如 `style.module.scss`。
+
+### 配置全局 scss 样式文件
+
+在 src/assets 下新增 style 文件夹，用于存放全局样式文件，新建 main.scss，设置一个用于测试的颜色变量：
+
+```js
+$test-color: blue;
+```
+
+如何将这个全局样式文件 全局注入 到项目中？配置代码到 `vite.config.ts`
+
+## vite.config.ts 配置优化
+
+```js
+yarn add vite-plugin-compression --dev // gzip压缩 生产环境生产 .gz 文件
+```
+
 # 单元测试工具
 
 - Jest
