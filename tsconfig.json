@@ -2,6 +2,7 @@
   "compilerOptions": {
     "importHelpers": true,
     "skipLibCheck": true,
+    // 允许从没有设置默认导出的模块中默认导入
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     "baseUrl": ".",
@@ -18,10 +19,20 @@
     "outDir": "./",
     // 忽略 this 的类型检查, Raise error on this expressions with an implied any type.
     "noImplicitThis": false,
+    // 编译时去除掉注释
+    "removeComments": true,
     "lib": ["esnext", "dom", "DOM.Iterable", "ScriptHost"],
     "types": ["vite/client", "jest"],
     "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }],
-    "paths": { "@/*": ["src/*"] }
+    // 指定特殊模块的路径
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "components": [
+        "src/components"
+      ]
+    },
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   // 排除不需要ts编译的文件
