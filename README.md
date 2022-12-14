@@ -360,6 +360,20 @@ eslint-config-prettier： 禁用所有与格式相关的 eslint 规则，解决 
 
 husky是一个用来管理git hook的工具，git hook即在我们使用git提交代码的过程中会触发的钩子。
 
+## 安装配置element-plus
+
+先安装element-plus包
+
+```js
+yarn add element-plus -S
+```
+
+再安装按需引入需要的依赖包unplugin-auto-import和unplugin-vue-components
+
+```js
+yarn add unplugin-auto-import unplugin-vue-components -D
+```
+
 # 🚀如何开始？
 
 - 1️⃣克隆存储库

@@ -35,8 +35,8 @@ export default defineComponent({
   <h3>使用状态管理 pinia</h3>
   <p>数量: {{ counter }}</p>
   <p>加倍: {{ doubleCounter }}</p>
-  <button @click="increment">增加</button>
-  <button @click="reset">重置</button>
+  <el-button type="primary" @click="increment">增加</el-button>
+  <el-button type="primary" @click="reset">重置</el-button>
 
   <div v-for="(poke, i) of pokemonsName" :key="i">{{ poke }}</div>
 </template>
