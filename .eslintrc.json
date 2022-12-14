@@ -15,11 +15,11 @@
   "eslint:recommended",
   "plugin:vue/vue3-recommended",
   "plugin:@typescript-eslint/recommended",
-  "plugin:prettier/recommended",
+  "plugin:prettier/recommended"
   // 解析.vue后缀
   // "@vue/typescript/recommended",
   // eslint-config-prettier 的缩写
-  "prettier"
+  // "prettier"
  ],
  "parserOptions": {
   "ecmaVersion": 2022, // "latest",
@@ -43,7 +43,7 @@
   "@typescript-eslint/no-non-null-assertion": "off",
   "@typescript-eslint/explicit-module-boundary-types":"off",
   "no-var": "error",
-  // "prettier/prettier": "error",
+  "prettier/prettier": "off",
   "no-console": "warn", // 禁止出现 console
   "no-debugger": "warn",
   "no-duplicate-case": "warn", // 禁止出现重复的 case 标签

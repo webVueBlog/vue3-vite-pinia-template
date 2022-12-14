@@ -2,6 +2,11 @@
 
 企业级前端开发与构建框架
 
+- vue3：vue团队官宣：2022年2月7日，vue3作为vue的默认版本。现在打开[vue官网](https://cn.vuejs.org/guide/introduction.html)，界面默认显示的是vue3版本的指导文档。vue团队在2020年9月18日就已经发布了vue3.0版本，俗称vue3。
+- vite：下一代前端开发与构建工具，由尤大大团队开发，突出了“快”的特点。[vite官网](https://vitejs.cn/)介绍了六大特点：极速的服务启动、轻量快速的热重载、丰富的功能、优化的构建、通用的插件、完全类型化的API。
+- pinia：一种新的状态管理工具，进入[官网](https://pinia.web3doc.top/)
+- element-plus：[element-plus](https://element-plus.gitee.io/zh-CN/guide/design.html)是基于Vue3、面向设计师和开发者的组件库
+
 This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
 ## Recommended IDE Setup
@@ -344,7 +349,6 @@ eslint-config-prettier： 禁用所有与格式相关的 eslint 规则，解决 
 
 husky是一个用来管理git hook的工具，git hook即在我们使用git提交代码的过程中会触发的钩子。
 
-
 # 🚀如何开始？
 
 - 1️⃣克隆存储库
@@ -353,40 +357,12 @@ husky是一个用来管理git hook的工具，git hook即在我们使用git提�
 - 4️⃣编译和缩小以用于生产
 - 5️⃣lints 和修复文件
 
-## yarn install
-
 ```js
 $ yarn install
-yarn install v1.22.19
-[1/4] Resolving packages...
-[2/4] Fetching packages...
-[3/4] Linking dependencies...
-warning " > @vue/vue3-jest@27.0.0-alpha.4" has unmet peer dependency "@babel/core@7.x".
-warning " > @vue/vue3-jest@27.0.0-alpha.4" has unmet peer dependency "babel-jest@27.x".
-warning "@vue/vue3-jest > @babel/plugin-transform-modules-commonjs@7.16.8" has unmet peer dependency "@babel/core@^7.0.0-0".
-[4/4] Building fresh packages...
-Done in 84.89s.
 ```
-
-## yarn dev
 
 ```js
 $ yarn dev
-yarn run v1.22.19
-$ vite
-Pre-bundling dependencies:
-  vue
-  pinia
-  vue-router
-  axios
-(this will be run only when your dependencies or config have changed)
-
-  vite v2.7.10 dev server running at:
-
-  > Local: http://localhost:3000/
-  > Network: use `--host` to expose
-
-  ready in 7539ms.
 ```
 
 ## commit 📦 (开箱即用)
