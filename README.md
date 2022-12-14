@@ -272,7 +272,9 @@ import { createPinia } from "pinia";
 app.use(createPinia())
 ```
 
+## 测试
 
+![1670990363134](https://user-images.githubusercontent.com/59645426/207502455-d96af1dc-ae30-4f9f-b443-55c00197e857.png)
 
 # 🚀如何开始？
 
