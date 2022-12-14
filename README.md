@@ -6,6 +6,7 @@
 - vite：下一代前端开发与构建工具，由尤大大团队开发，突出了“快”的特点。[vite官网](https://vitejs.cn/)介绍了六大特点：极速的服务启动、轻量快速的热重载、丰富的功能、优化的构建、通用的插件、完全类型化的API。
 - pinia：一种新的状态管理工具，进入[官网](https://pinia.web3doc.top/)
 - element-plus：[element-plus](https://element-plus.gitee.io/zh-CN/guide/design.html)是基于Vue3、面向设计师和开发者的组件库
+- vue-router: [next.router.vuejs.org/zh/guide/](https://router.vuejs.org/zh/guide/)
 
 This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
@@ -279,6 +280,16 @@ import { createPinia } from "pinia";
 app.use(createPinia())
 ```
 
+### Pinia 让 Actions 更加的灵活：
+
+- 可以通过组件或其他 action 调用
+- 可以从其他 store 的 action 中调用
+- 直接在 store 实例上调用
+- 支持同步或异步
+- 有任意数量的参数
+- 可以包含有关如何更改状态的逻辑（也就是 vuex 的 mutations 的作用）
+- 可以 $patch 方法直接更改状态属性
+
 ## 测试
 
 ![1670990363134](https://user-images.githubusercontent.com/59645426/207502455-d96af1dc-ae30-4f9f-b443-55c00197e857.png)
@@ -359,9 +370,6 @@ husky是一个用来管理git hook的工具，git hook即在我们使用git提�
 
 ```js
 $ yarn install
-```
-
-```js
 $ yarn dev
 ```
 
