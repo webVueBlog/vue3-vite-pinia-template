@@ -391,6 +391,31 @@ app.mount('#app')
 yarn add unplugin-auto-import unplugin-vue-components -D
 ```
 
+## 环境变量配置
+
+vite 提供了两种模式：具有开发服务器的开发模式（development）和生产模式（production）
+
+```js
+项目根目录新建: .env.development
+NODE_ENV=development VITE_APP_WEB_URL= 'YOUR WEB URL'
+
+项目根目录新建: .env.production
+NODE_ENV=production VITE_APP_WEB_URL= 'YOUR WEB URL'
+```
+
+### 组件中使用：
+```js
+console.log(import.meta.env.VITE_APP_WEB_URL)
+```
+
+### 配置 `package.json`:
+
+打包区分开发环境和生产环境
+```js
+"build:dev": "vite build --mode development",
+"build:pro": "vite build --mode production",
+```
+
 # 🚀如何开始？
 
 - 1️⃣克隆存储库
