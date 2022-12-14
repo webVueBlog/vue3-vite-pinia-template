@@ -7,6 +7,8 @@
 - pinia：一种新的状态管理工具，进入[官网](https://pinia.web3doc.top/)
 - element-plus：[element-plus](https://element-plus.gitee.io/zh-CN/guide/design.html)是基于Vue3、面向设计师和开发者的组件库
 - vue-router: [next.router.vuejs.org/zh/guide/](https://router.vuejs.org/zh/guide/)
+- 集成 tailwindcss
+- 集成mock.js： mock.js 官网：[mockjs.com/](http://mockjs.com/)
 
 This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
@@ -415,6 +417,92 @@ console.log(import.meta.env.VITE_APP_WEB_URL)
 "build:dev": "vite build --mode development",
 "build:pro": "vite build --mode production",
 ```
+
+## 集成 tailwindcss
+
+```js
+// 安装
+npm install -D tailwindcss@latest postcss@latest autoprefixer@lates
+```
+
+创建您的配置文件 接下来，生成您的 tailwind.config.js 和 postcss.config.js 文件：
+
+```js
+npx tailwindcss init -p
+```
+
+这将会在您的项目根目录创建一个最小化的 tailwind.config.js 文件：
+
+```js
+// tailwind.config.js
+module.exports = {
+  purge: [],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+这也将会创建一个包含已配置好的 tailwindcss 和 autoprefixer 的 postcss.config.js 配置文件：
+
+```js
+// postcss.config.js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+```
+
+配置 Tailwind 来移除生产环境下没有使用到的样式声明
+
+在您的 tailwind.config.js 文件中，配置 purge 选项指定所有的 pages 和 components 文件，使得 Tailwind 可以在生产构建中对未使用的样式进行摇树优化。
+
+```js
+  // tailwind.config.js
+  module.exports = {
+-   purge: [],
++   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+    darkMode: false, // or 'media' or 'class'
+    theme: {
+      extend: {},
+    },
+    variants: {
+      extend: {},
+    },
+    plugins: [],
+  }
+```
+
+在您的 CSS 中引入 Tailwind 创建 ./src/index.css 文件 并使用 @tailwind 指令来包含 Tailwind的 base、 components 和 utilities 样式，来替换掉原来的文件内容。
+
+```js
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Tailwind 会在构建时将这些指令转换成所有基于您配置的设计系统生成的样式文件。
+
+最后，确保您的 CSS 文件被导入到您的 ./src/main.js 文件中。
+
+```js
+// src/main.js
+import { createApp } from 'vue'
+import App from './App.vue'
+import './index.css'
+
+createApp(App).mount('#app')
+```
+
+您已经完成了所有步骤！现在，当您运行 npm run dev, Tailwind CSS 就可以在您的 Vue 3 and Vite 项目中使用了。
 
 # 🚀如何开始？
 

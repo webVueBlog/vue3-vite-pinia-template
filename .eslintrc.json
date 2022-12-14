@@ -45,7 +45,7 @@
   "@typescript-eslint/explicit-module-boundary-types":"off",
   "no-var": "error",
   "prettier/prettier": "off",
-  "no-console": "warn", // 禁止出现 console
+  "no-console": "off", // 禁止出现 console
   "no-debugger": "warn",
   "no-duplicate-case": "warn", // 禁止出现重复的 case 标签
   "no-empty": "warn", // 禁止出现空的语句块
