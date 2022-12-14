@@ -58,7 +58,7 @@
   "no-lone-blocks": "warn", // 禁用不必要的嵌套块
   "no-multi-spaces": "warn", // 禁止使用多个空格
   "no-redeclare": "warn", // 禁止多次声明同一个变量
-  "no-return-await": "warn", // 禁止在 return 语句中使用赋值语句
+  "no-return-await": "off", // 禁止在 return 语句中使用赋值语句
   "no-self-assign": "warn", // 禁止自我赋值
   "no-self-compare": "warn", // 禁止自身比较
   "no-useless-catch": "warn", // 禁止不必要的 catch 语句

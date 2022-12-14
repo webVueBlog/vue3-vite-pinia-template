@@ -6,7 +6,9 @@ This template should help get you started developing with Vue 3 and Typescript i
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
-## Type Support For `.vue` Imports in TS
+## Type Support For `.vue` Imports in TS .vueTS 中对导入的类型支持
+  
+由于 TypeScript 无法处理.vue导入的类型信息，因此默认情况下它们被填充为通用 Vue 组件类型。在大多数情况下，如果您并不真正关心模板之外的组件道具类型，这很好。但是，如果您希望在.vue导入中获取实际的道具类型（例如，在使用手动调用时获取道具验证），您可以通过从 VSCode 命令面板运行h(...)来启用 Volar 的.vue类型支持插件。Volar: Switch TS Plugin on/off
 
 Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
 
@@ -220,17 +222,57 @@ $test-color: blue;
 yarn add vite-plugin-compression --dev // gzip压缩 生产环境生产 .gz 文件
 ```
 
-# 单元测试工具
+## 路由
 
-- Jest
+```js
+# 安装路由
+yarn add vue-router
+```
 
-# 推荐的 IDE 设置
+vue-router4.x 支持 typescript，配置路由的类型是 RouteRecordRaw，这里 meta 可以让我们有更多的发挥空间。
 
-- VSCode + Volar
+- title: string；页面标题
+- icon?: string；图标，一般配合菜单使用
+- auth?: boolean；是否需要登录权限
+- ignoreAuth?: boolean；是否忽略权限
+- roles?: RoleEnum[]；可以访问的角色
+- keepAlive?: boolean；是否开启页面缓存
+- hideMenu?: boolean；有些路由我们并不想在菜单中显示，比如某些编辑页面
+- order?: number；菜单排序
+- frameUrl?: string；嵌套外链
 
-# .vueTS 中对导入的类型支持
-  
-由于 TypeScript 无法处理.vue导入的类型信息，因此默认情况下它们被填充为通用 Vue 组件类型。在大多数情况下，如果您并不真正关心模板之外的组件道具类型，这很好。但是，如果您希望在.vue导入中获取实际的道具类型（例如，在使用手动调用时获取道具验证），您可以通过从 VSCode 命令面板运行h(...)来启用 Volar 的.vue类型支持插件。Volar: Switch TS Plugin on/off
+## 状态管理 pinia
+
+由于 vuex 4 对 typescript 的支持让人感到难过，所以状态管理弃用了 vuex 而采取了 pinia. pinia 的作者是 Vue 核心团队成员
+
+```js
+yarn add pinia
+```
+
+### 安装 pinia
+
+Pinia 与 Vuex 的区别:
+
+- id 是必要的，它将所使用 store 连接到 devtools。
+- 创建方式： `new Vuex.Store(...)` (vuex3)，`createStore(...)` (vuex4)。
+- 对比于 vuex3，state 现在是一个 函数返回对象。
+- 没有 mutations，不用担心，state 的变化依然记录在 devtools 中。
+
+```js
+# 安装
+yarn add pinia@next
+```
+
+`main.ts` 中增加
+
+```js
+# 引入
+import { createPinia } from "pinia";
+# 创建根存储库并将其传递给应用程序
+app.use(createPinia())
+```
+
+
 
 # 🚀如何开始？
 
