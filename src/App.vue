@@ -3,7 +3,6 @@
     <router-link to="/">主页</router-link>|
     <router-link to="/about">关于</router-link>
   </div>
-  <img alt="Vue logo" src="@/assets/images/logo.png" width="120" />
   <router-view />
 </template>
 
