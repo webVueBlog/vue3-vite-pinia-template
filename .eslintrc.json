@@ -9,25 +9,27 @@
  "env": {
   "browser": true,
   "es2021": true,
-  "node": true
+  "node": true // 解决eslint找不到module的报错
  },
  "extends": [
-  "plugin:vue/vue3-recommended",
   "eslint:recommended",
-  // "plugin:@typescript-eslint/recommended",
-  // "plugin:prettier/recommended",
-  "@vue/typescript/recommended",
+  "plugin:vue/vue3-recommended",
+  "plugin:@typescript-eslint/recommended",
+  "plugin:prettier/recommended",
+  // 解析.vue后缀
+  // "@vue/typescript/recommended",
+  // eslint-config-prettier 的缩写
   "prettier"
  ],
  "parserOptions": {
-  "ecmaVersion": 2022,
+  "ecmaVersion": 2022, // "latest",
   "parser": "@typescript-eslint/parser",
   "sourceType": "module",
   "ecmaFeatures": {
    "jsx": true
   }
  },
- "plugins": [],
+ "plugins": ["vue", "@typescript-eslint"],
  "rules": {
   "@typescript-eslint/ban-ts-ignore": "off",
   "@typescript-eslint/no-unused-vars": "off",
