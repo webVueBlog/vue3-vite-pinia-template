@@ -362,10 +362,27 @@ husky是一个用来管理git hook的工具，git hook即在我们使用git提�
 
 ## 安装配置element-plus
 
+> Element Plus 目前还处于快速开发迭代中。目前使用2.0.1版可以结合vite-plugin-style-import插件按需加载样式。 unplugin-vue-components 按需自动导入组件 使用 Element Plus组件时可以直接使用。
+
 先安装element-plus包
 
 ```js
 yarn add element-plus -S
+
+import {createApp} from 'vue'
+import App from './App.vue'
+import {createPinia} from 'pinia'
+import router from './router/router'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
+const app = createApp(App)
+app
+    .use(createPinia())
+    .use(router)
+    .use(ElementPlus, {size: 'small', zIndex: 3000})
+
+app.mount('#app')
 ```
 
 再安装按需引入需要的依赖包unplugin-auto-import和unplugin-vue-components
