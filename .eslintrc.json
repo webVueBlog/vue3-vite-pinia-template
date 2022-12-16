@@ -16,11 +16,11 @@
   "eslint:recommended",
   "plugin:vue/vue3-recommended",
   "plugin:@typescript-eslint/recommended",
+  "prettier",
   "plugin:prettier/recommended"
   // 解析.vue后缀
   // "@vue/typescript/recommended",
   // eslint-config-prettier 的缩写
-  // "prettier"
  ],
  "parserOptions": {
   "ecmaVersion": 2022, // "latest",
@@ -32,6 +32,7 @@
  },
  "plugins": ["vue", "@typescript-eslint"],
  "rules": {
+  "vue/multi-word-component-names": "off",
   "@typescript-eslint/ban-ts-ignore": "off",
   "@typescript-eslint/no-unused-vars": "off",
   "@typescript-eslint/explicit-function-return-type": "off",

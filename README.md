@@ -1,4 +1,4 @@
-# Vue 3 + TypeScript + Vite + Pinia
+# Vue 3 + TypeScript + Vite + Pinia + Ant-design-vue
 
 企业级前端开发与构建框架
 
@@ -9,6 +9,7 @@
 - vue-router: [next.router.vuejs.org/zh/guide/](https://router.vuejs.org/zh/guide/)
 - 集成 tailwindcss
 - 集成mock.js： mock.js 官网：[mockjs.com/](http://mockjs.com/)
+- 结合 node-ssh 和 ali-oss 编写服务器部署脚本 和 阿里云 oss 部署脚本
 
 This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
@@ -531,6 +532,19 @@ $ yarn dev
 - 🍃 refactor: 代码重构时使用
 - 🤖 revert: 执行git revert打印的message
 - 🔩 test: 添加测试或者修改现有测试
+- ⚡ Vue 3, Vite 2, pnpm - 为速度而生
+- 💪 Typescript - 强大的类型检查
+- 🔥 使用 新的 `<script setup>` 语法
+- 🤙🏻 默认开启 响应性语法糖
+- 📦 组件自动化加载
+- 📥 API 自动加载 - 直接使用 Composition API 无需引入
+- 💡 Vue Router v4 - Vue 路由系统
+- 🎨 Tailwind CSS v3 - 快速建立现代网站，而不必离开 HTML。
+- 🎉 NProgress - 页面加载进度反馈
+- 🍍 使用 Pinia 的状态管理
+- 🌼 Daisy - 开源的 Tailwind CSS 组件库
+- 📜 中文字体font-family常用预设
+- ☁️ 零配置部署 Netlify
 
 ## 单文件组件
 

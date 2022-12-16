@@ -6,6 +6,9 @@ import viteCompression from 'vite-plugin-compression'
 // import AutoImport from 'unplugin-auto-import/vite'
 // import Components from 'unplugin-vue-components/vite'
 // import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
+import { visualizer } from "rollup-plugin-visualizer"
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -23,7 +26,12 @@ export default defineConfig({
     // Components({
     //   resolvers: [ElementPlusResolver()],
     // }),
+    // vite按需
+    Components({
+      resolvers: [AntDesignVueResolver()],
+    }),
     eslintPLugin(),
+    visualizer(),
     // gizp压缩 生产环境生产 .gz 文件
     viteCompression({
       verbose: true,

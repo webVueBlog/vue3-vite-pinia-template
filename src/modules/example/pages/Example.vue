@@ -19,6 +19,8 @@ const { increment } = mapActions(useCounterStore, ["increment"])
 const reset = () => main.$reset()
 // Call action from store to get pokemons on mounted lifecycle
 onMounted(() => pokemon.getPokemons())
+
+const value = ref<number>(2)
 </script>
 
 <script lang="ts">
@@ -39,6 +41,8 @@ export default defineComponent({
   <el-button type="primary" @click="reset">重置</el-button>
 
   <br />
+
+  <a-rate v-model:value="value" />
 
   <div class="grid grid-cols-3 divide-x divide-green-500">
     <div>1</div>
